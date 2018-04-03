@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.container {
+  margin: 0 10%;
+  text-align: justify;
+  background: #849d8f url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+}
+
+.header-first {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  width: 60%;
+
+}
+
+.header-title {
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.header-first-list {
+  display: flex;
+  min-width: 400px;
+  align-self: center;
+  justify-content: flex-start;
+}
+
+.header-first-list li {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.header-first-list li:nth-child(2) {
+  width: 170px;
+}
+
+.header-first-list li:hover {
+  background: #fff;
+  cursor: pointer;
+  color: #000;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.header-second {
+  display: flex;
+  width: 38%;
+  min-width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: flex-end;
+}
+
+.header-button {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  display: block;
+  margin-right: 10px;
+}
+
+.header-button-search {
+  display: inline;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+}
+
+.header-button-search:hover {
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url("../img/loupe-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-button-entrance {
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("../img/entrance.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 20px;
+  border-radius: 20px;
+  width: 93px;
+  height: 33px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 18px;
+  color: #fff;
+}
+
+.header-button-entrance:hover {
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url("../img/entrance-black.svg");
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  background-position: 20px;
+  color: #000;
+}
+
+.header-button-entrance:hover ~ .modal-login {
+  display: none;
+}
+
+.header-button-basket {
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 16px;
+  width: 93px;
+  height: 33px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 18px;
+  color: #fff;
+}
+
+.main-banner {
+  background: url("http://pngimg.com/uploads/hippo/hippo_PNG16.png") no-repeat;
+  background-size: contain;
+  background-position: 20%;
+  height: 500px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main-banner::after {
+  content: "При покупке двух слонов, вы получаете одного бегемота совершенно бесплатно!!!";
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  right: 25%;
+  top: 350px;
+  text-align: justify;
+}
+
+.main-banner::before {
+  content: "";
+  background: url("../img/akcia.png") no-repeat;
+  background-size: 400px;
+  transform: rotate(-30deg);
+  display: block;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  right: 20%;
+}
+
+.banner-button {
+  height: 50px;
+  width: 300px;
+  font-size: 20px;
+  right: 25%;
+  top: 500px;
+
+}
+
+.main-title {
+  margin-bottom: 50px;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-item {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border: dashed 5px #fff;
+  border-radius: 50%;
+  margin-bottom: 100px;
+  left: 10px;
+  bottom: -90px;
+}
+
+.product-item-hit::before {
+  content: "";
+  background: url("../img/hit.png") no-repeat;
+  background-size: 80px, 80px;
+  width: 80px;
+  height: 80px;
+  display: block;
+  position: absolute;
+}
+
+.product-item-new::before {
+  content: "";
+  background: url("../img/new.png") no-repeat;
+  background-size: 80px, 80px;
+  width: 80px;
+  height: 80px;
+  display: block;
+  position: absolute;
+}
+
+.product-item-frame {
+  position: relative;
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  background: #849d8f url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
+  box-shadow: 10px 5px 30px 0px #333;
+  margin-bottom: 50px;
+}
+
+.product-title {
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 250px;
+  bottom: 10px;
+  left: 20px;
+  border-radius: 18px;
+}
+
+.product-hover-menu {
+  display: none;
+  position: absolute;
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  left: -15px;
+  top: -15px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.button {
+  border-radius: 20px;
+  position: absolute;
+  background: linear-gradient(#ff1a1a 0%, #ff3333 100%);
+  box-shadow: 0px 2px 2px 0px #333;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: linear-gradient(#ff1a1a 0%, #ff3333 100%);
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+}
+
+.button:active {
+  background: linear-gradient(#ff3333 0%, #ff1a1a 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+.product-hover-button {
+  height: 40px;
+  width: 200px;
+  bottom: -20px;
+  left: 60px;
+}
+
+.product-item-hit-first {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18788.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item-hit-second {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18801.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item-hit-third {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18787.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item-hit-forth {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18786.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item-new-first {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18767.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item-new-second {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18760.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item-new-third {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18754.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item-new-forth {
+  background: url("http://pngimg.com/uploads/elephants/elephants_PNG18756.png") no-repeat;
+  background-size: 300px;
+}
+
+.product-item:hover .product-hover-menu{
+  display: block;
+}
+
+.comments {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.comments-frame {
+  background: #849d8f url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
+  box-shadow: 10px 5px 30px 0px #333;
+  padding: 5px;
+  border-radius: 18px;
+  min-width: 500px;
+}
+
+.comments-border {
+  border: dashed 4px #fff;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.comments-spravka-border {
+  border: dashed 4px #fff;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.comments-spravka-title {
+  margin-bottom: 20px;
+}
+
+.comments-spravka-text h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.comments-spravka-header {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.comments-spravka-text {
+  position: relative;
+  text-align: justify;
+  margin-bottom: 45px;
+}
+
+.comments-text {
+  position: relative;
+  display: flex;
+}
+
+.kolobok {
+  background: url("../img/kolobok.png") no-repeat;
+  background-size: 200px;
+  display: block;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: solid 2px #fff;
+  text-align: center;
+  line-height: 400px;
+  vertical-align: bottom;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.kolobok-comment {
+  width: 300px;
+}
+
+.spravka-button {
+  height: 40px;
+  width: 200px;
+  right: 10px;
+}
+
+.comment-button {
+  height: 40px;
+  width: 200px;
+  right: 10px;
+  bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  align-items: center;
+}
+
+.footer-social {
+  width: 300px;
+}
+
+.footer-social-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-add-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-button {
+  height: 40px;
+  width: 40px;
+  display: block;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.social-button:hover {
+  opacity: 1;
+}
+
+.social-text {
+  font-weight: bold;
+}
+
+.fb {
+  background: url("../img/fb.svg") no-repeat center;
+}
+
+.tt {
+  background: url("../img/twitter.svg") no-repeat center;
+}
+
+.vk {
+  background: url("../img/vk.svg") no-repeat center;
+}
+
+
+
+.modal-login {
+    display: none;
+    position: relative;
+    border-radius: 6px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    width: 277px;
+    height: 214px;
+    padding: 0;
+    right: 0;
+    z-index: 100;
+}
