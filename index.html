@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="ru">
   <meta charset="utf-8">
   <title>Elephants</title>
   <link rel="stylesheet" type="text/css" href="css/normolize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="text/css" href="css/modal.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700" rel="stylesheet">
 </head>
 <body class=container>
@@ -18,25 +19,32 @@
       </ul>
     </div>
     <div class="header-second">
+      <div class="search-button">
       <button class="header-button header-button-search" type="button" name="button"></button>
+      <section class="modal modal-search">
+        <form class="search" action="index.html" method="post">
+          <input class="search-field" id="search-field" type="search" name="search" placeholder="Что ищем?">
+          <label class="label-search" for="search-field"></label>
+        </form>
+      </section>
+      </div>
+      <div class="entrance-button-section">
       <button class="header-button header-button-entrance" type="button" name="button">Вход</button>
       <section class="modal modal-login">
-        <h2 class="visually-hidden">Меню регистрации</h2>
-
-        <form  action="index.html" method="post">
+        <form class="modal-form" action="index.html" method="post">
           <input class="entrance-field-email" id="entrance-field-email" type="email" name="email" placeholder="Электронная почта">
           <input class="entrance-field-password" id="entrance-field-password" type="password" name="password" placeholder="Пароль">
           <div class="button-and-link">
-            <button class="middle-button entrance-button-1" id="entrance-submit-button" type="submit" name="entrance">Войти</button>
+            <button class="button entrance-button" id="entrance-submit-button" type="submit" name="entrance">Войти</button>
             <div class="modal-login-links">
-              <a href="#">Забыли пароль?</a> <br>
-              <a href="#">Новая регистрация</a>
+              <p><a href="#">Забыли пароль?</a></p>
+              <p><a href="#">Новая регистрация</a></p>
             </div>
           </div>
         </form>
-
-        <!--Здесь будет форма  -->
       </section>
+      </div>
+
       <button class="header-button header-button-basket" type="button" name="button">Пусто</button>
     </div>
   </header>
@@ -150,7 +158,7 @@
 
       <div class="comments-frame">
         <div class="comments-border">
-            <h2 class="comments-title">Отзывы:</h2>
+          <h2 class="comments-title">Отзывы:</h2>
           <div class="comments-text">
             <div class="kolobok">Колобок</div>
             <div class="kolobok-comment">
@@ -158,7 +166,6 @@
               <p><em>Характер добрый, нежный. Очень любит рыбий жир…»</em></p>
               <button class="button comment-button">Отправить отзыв</button>
             </div>
-
           </div>
         </div>
       </div>
