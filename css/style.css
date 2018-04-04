@@ -23,7 +23,7 @@ li {
 }
 
 .header {
-  height: 100px;
+  height: 80px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -148,7 +148,7 @@ li {
 }
 
 .main {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .main-banner {
