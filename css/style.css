@@ -152,10 +152,10 @@ li {
 }
 
 .main-banner {
-  background: url("http://pngimg.com/uploads/hippo/hippo_PNG16.png"), url("../img/bg.png");
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: scroll, fixed;
-  background-size: contain, cover;
+  background: url("http://pngimg.com/uploads/hippo/hippo_PNG16.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: contain;
   background-position: 20%;
   height: 500px;
   text-align: center;
