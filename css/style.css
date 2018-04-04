@@ -10,7 +10,6 @@ html{
 }
 
 .container {
-  margin: 0 10%;
   text-align: justify;
   background: #849d8f url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
 }
@@ -29,6 +28,13 @@ li {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 0 10%;
+  top: 0;
+  z-index: 200;
+  opacity: 0.86;
+  background: #849d8f url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
 }
 
 .header-first {
@@ -141,13 +147,25 @@ li {
   color: #fff;
 }
 
+.main {
+  padding-top: 100px;
+}
+
 .main-banner {
-  background: url("http://pngimg.com/uploads/hippo/hippo_PNG16.png") no-repeat;
-  background-size: contain;
+  background: url("http://pngimg.com/uploads/hippo/hippo_PNG16.png"), url("../img/bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
+  background-size: contain, cover;
   background-position: 20%;
   height: 500px;
   text-align: center;
   margin-bottom: 50px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.main-products-comments {
+  padding: 0 10%;s
 }
 
 .main-banner::after {
