@@ -193,6 +193,7 @@ li {
 }
 
 
+
 .main-banner::before {
   content: "";
   background: url("../img/akcia.png") no-repeat;
