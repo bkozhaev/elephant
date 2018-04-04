@@ -28,15 +28,13 @@ li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
 }
 
 .header-first {
   display: flex;
   flex-wrap: wrap;
   align-items: left;
-  width: 60%;
-
 }
 
 .header-title {
@@ -74,10 +72,7 @@ li {
 
 .header-second {
   display: flex;
-  width: 38%;
-  min-width: 300px;
-  margin-left: 10px;
-  margin-right: 10px;
+  min-width: 100px;
   justify-content: flex-end;
 }
 
@@ -349,7 +344,13 @@ li {
   box-shadow: 10px 5px 30px 0px #333;
   padding: 5px;
   border-radius: 18px;
-  min-width: 500px;
+  min-width: 700px;
+}
+
+@media (max-width: 480px) {
+  .comment-frame {
+    min-width: 400px;
+  }
 }
 
 .comments-border {
@@ -411,6 +412,7 @@ li {
 
 .kolobok-comment {
   width: 300px;
+  margin-left: 20px;
 }
 
 .spravka-button {
