@@ -184,12 +184,13 @@ li {
   position: absolute;
   right: 20%;
   top: 300px;
+
   text-align: center;
   background: yellow;
   border-radius: 10;
   opacity: 1;
   padding-top: 5px;
-}
+
 
 .main-banner::before {
   content: "";
