@@ -74,7 +74,10 @@ li {
   color: #000;
   border-radius: 15px;
   font-weight: bold;
+  display: block;
 }
+
+
 
 .header-second {
   display: flex;
@@ -164,35 +167,30 @@ li {
   color: #fff;
   z-index: 100;
   position: relative;
-
 }
 
-.main-products-comments {
-  padding: 0 10%;
-  margin-top: 20px;
-}
-
-.main-banner::after {
-  content: "При покупке двух слонов, вы получаете одного бегемота совершенно бесплатно!!!";
+.main-banner-action {
   vertical-align: -50%;
   color: red;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   display: block;
-  height: 70px;
+  height: 80px;
   width: 300px;
   position: absolute;
   right: 20%;
   top: 300px;
 
   text-align: center;
-  background: yellow;
-  border-radius: 10;
-  opacity: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
   padding-top: 5px;
 }
 
-
+.main-products-comments {
+  padding: 0 10%;
+  margin-top: 20px;
+}
 
 .main-banner::before {
   content: "";
@@ -213,8 +211,8 @@ li {
   height: 50px;
   width: 300px;
   font-size: 20px;
-  right: 20%;
-  top: 380px;
+  right: 0;
+  top: 120px;
 
 }
 
@@ -228,8 +226,107 @@ li {
 
 .product-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 1200px;
+}
+
+@media (max-width: 1617px) {
+  .product-list {
+    min-width: 500px;
+    flex-wrap: wrap;
+  }
+  .main-products-comments {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1400px) {
+  .product-list {
+    min-width: 100px;
+    flex-wrap: wrap;
+    max-width: 900px;
+  }
+  .main-products-comments {
+    padding: 0 10%;
+  }
+}
+
+
+.dropdown {
+  display: none;
+  width: 33px;
+  height: 38px;
+}
+
+.dropbtn {
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("../img/drop_btn_1.png");
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: right;
+  color: #fff;
+  border: none;
+}
+
+.dropbtn:hover {
+  background-image: url("../img/drop_btn.png");
+  background-color: rgba(255, 255, 255, 0.9);
+  background-repeat: no-repeat;
+  background-size: 33px;
+}
+
+.dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list:hover {
+  display: block;
+}
+
+.dropdown-list li:hover{
+  background: rgba(252, 252, 252, 1);
+  cursor: pointer;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.dropdown-list {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  background: rgba(252, 252, 252, 0.7);
+  padding: 5px 0;
+}
+
+.dropdown-list li{
+  padding: 5px 0;
+  padding-left: 5px;
+}
+
+
+@media (max-width: 1015px) {
+  .header-first-list-hide {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .header {
+    padding: 0;
+  }
 }
 
 .product-item {
@@ -271,6 +368,10 @@ li {
   background: #849d8f url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
   box-shadow: 10px 5px 30px 0px #333;
   margin-bottom: 50px;
+}
+
+.product-item-frame .product-item-hit-forth {
+  margin-right: 0;
 }
 
 .product-title {
@@ -378,21 +479,6 @@ li {
   padding: 5px;
   border-radius: 18px;
   min-width: 700px;
-}
-
-@media (max-width: 480px) {
-  .comment-frame {
-    min-width: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-item-hit::before {
-    content: "";
-    background-size: 40px, 40px;
-    width: 40px;
-    height: 40px;
-  }
 }
 
 .comments-border {
