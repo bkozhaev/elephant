@@ -243,6 +243,7 @@ li {
 @media (max-width: 1400px) {
   .product-list {
     min-width: 100px;
+
     max-width: 900px;
     justify-content:  space-around;
     margin-left: 15px;
@@ -250,6 +251,7 @@ li {
   .main-products-comments {
     padding: 0 10%;
   }
+
   .comments .comments-frame {
     max-width: 500px;
   }
