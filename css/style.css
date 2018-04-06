@@ -77,8 +77,6 @@ li {
   display: block;
 }
 
-
-
 .header-second {
   display: flex;
   min-width: 100px;
@@ -274,6 +272,7 @@ li {
   display: none;
   width: 33px;
   height: 38px;
+  margin-top: 22px;
 }
 
 .dropbtn {
